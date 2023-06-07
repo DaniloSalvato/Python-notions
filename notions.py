@@ -139,15 +139,6 @@ class Mae:
     def __init__(self, atributo1):
         self._atributo1 = atributo1
 
-    @property
-    def atributo(self):
-        return self._atributo1
-    
-    #metodo set
-    @atributo.setter
-    def atributo(self, atributo):
-        self._atributo1 = atributo
-
 #Quando colocado o parenteses na frente da classe indica a classe herdada
 class Filho1(Mae):
     def __init__(self, atributo1, atributo2):
