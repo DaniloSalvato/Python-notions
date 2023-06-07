@@ -160,7 +160,7 @@ class Filho2(Mae):
         super().__init__(atributo1)
         self.atributo3 = atributo3
 
-#Polimorfismo -> é a extensão da clase além da herança
+#Polimorfismo -> é a extensão da classe além da herança
 a = Filho1(1, 2)
 b = Filho2(1, 3)
 
