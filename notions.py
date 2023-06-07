@@ -4,8 +4,9 @@
 # I - Interface segregation principle - Princípio de segregação de interface
 # D - Dependency inversion principle - Princípio de inversão de dependência
 
+#Anotações POO python
 
-#criação de classe
+#Criação de classe
 class Exemplo:
 
     #metodo construtuor
@@ -126,3 +127,39 @@ lista = set(lista)
 
 lista = dict([('carro','nissan'), ('casa','normal')])
 print(lista)
+
+#-------------------------------------------------------------------------------------------------------------------------------------
+#Herança
+
+#Quando um atributo é definido como privado ele passa a seguir o comportamento de "_nomeClasse__nomeAtributo",
+#para trabalha com a herança precisamos alterar esse privado ("__") para somente um "_" que significa protegido por convesão 
+#mas não o tornando privado. Ex: __atributo1 == _atributo1
+
+class Mae:
+    def __init__(self, atributo1):
+        self._atributo1 = atributo1
+
+    @property
+    def atributo(self):
+        return self.__atributo1
+    
+    #metodo set
+    @atributo.setter
+    def atributo(self, atributo):
+        self.__atributo1 = atributo
+
+#Quando colocado o parenteses na frente da classe indica a classe herdada
+class Filho1(Mae):
+    def __init__(self, atributo1, atributo2):
+        #super().__init__ acessa os atributos que vão ser herdados da classe mãe
+        super().__init__(atributo1)
+        self.atributo2 = atributo2
+
+class Filho2(Mae):
+    def __init__(self, atributo1, atributo3):
+        super().__init__(atributo1)
+        self.atributo3 = atributo3
+
+a = Mae('1') 
+print(a)        
+        
