@@ -5,7 +5,6 @@
 # D - Dependency inversion principle - Princípio de inversão de dependência
 
 #Anotações POO python
-
 #Criação de classe
 class Exemplo:
 
